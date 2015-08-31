@@ -19,7 +19,7 @@ Installing webmethods as a docker image
 ###*Software*###
 
 	You would need docker installed on your windows/mac/linux machine. You can chose the right one for your flavor of os
-	at [docker installation](dockerurl)
+	at [docker-installation](dockerurl).
 	
 	
 	
