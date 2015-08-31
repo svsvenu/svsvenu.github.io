@@ -16,12 +16,22 @@
 	with software that needs installation you would need to copy the installers into the base image and then
 	install the software inside the container
 	
-##*Software*##
+##**Software**##
 
 	You would need docker installed on your windows/mac/linux machine. You can chose the right one for your flavor of os below 
-[docker-installation](https://docs.docker.com/installation).
-	If you need a trial installation of webmethods, you can download it from below
+[docker-installation](https://docs.docker.com/installation).If you need a trial installation of webmethods, you can download it from below
 [Webmethods-installation](http://techcommunity.softwareag.com/ecosystem/communities/public/webmethods/contents/download/)
+
+##Steps to build the image##
+
+-
+Step 1
+-
+
+-
+Step 2
+-
+
 	
 	
 
