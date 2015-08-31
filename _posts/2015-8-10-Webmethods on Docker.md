@@ -25,7 +25,7 @@
 ##Steps to build the image##
 
 
-###Step 1
+###Step 1 - Pull the webmethods installation images
 
 The webmethods installer downloads 2 files. An image file and an installer file. In addition to these two files you will also have
 a zip file sent to your url that has the all the keys that the installer needs. Copy all the files into one folder
@@ -33,9 +33,28 @@ a zip file sent to your url that has the all the keys that the installer needs. 
 ![_config.yml]({{ site.baseurl }}/images/saginstaller.png)
 
 
-###Step 2
+###Step 2 - Create a docker file 
+
+Create a file called 'Dockerfile' (case sensitive ) in the same directory as the ones we put the installer and images in.The contents of the
+docker file are below
+
 ```
-System.out.println("hello");
+### Set the base image to Fedora
+FROM jboss/base-jdk:7
+
+### File Author / Maintainer
+MAINTAINER "Venu " "svsvenu@gmail.com"
+
+## Switch the user to root
+USER root
+
+### Install Webmethods
+ADD SoftwareAGInstaller20150415.jar /tmp/SoftwareAGInstaller20150415.jar
+ADD webMFREEDownload98(Linux64bit).zip /tmp/webMFREEDownload98(Linux64bit).zip
+ADD wM_v9.8_Free+Trial_Keys.zip /tmp/wM_v9.8_Free+Trial_Keys.zip
+
+### Open Ports, for this simple example we are only going to open up the admin port
+EXPOSE 5555
 
 
 ```
