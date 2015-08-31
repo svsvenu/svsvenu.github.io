@@ -19,7 +19,8 @@
 ##*Software*##
 
 	You would need docker installed on your windows/mac/linux machine. You can chose the right one for your flavor of os
-	at [docker-installation](https://docs.docker.com/installation).
+	at 
+[docker-installation](https://docs.docker.com/installation).
 	
 	
 
