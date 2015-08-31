@@ -30,8 +30,7 @@
 The webmethods installer downloads 2 files. An image file and an installer file. In addition to these two files you will also have
 a zip file sent to your url that has the all the keys that the installer needs. Copy all the files into one folder
 
-![sag screenshot]({{ site.baseurl }}/images/saginstaller.png)
-
+![_config.yml]({{ site.baseurl }}/images/config.png)
 
 -
 ###Step 2
