@@ -24,12 +24,17 @@
 
 ##Steps to build the image##
 
--
-Step 1
--
+
+###Step 1
+
+The webmethods installer downloads 2 files. An image file and an installer file. In addition to these two files you will also have
+a zip file sent to your url that has the all the keys that the installer needs. Copy all the files into one folder
+
+![sag screenshot]({{ site.url }}/saginstaller.png)
+
 
 -
-Step 2
+###Step 2
 -
 
 	
