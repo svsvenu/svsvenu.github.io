@@ -1,4 +1,7 @@
-
+---
+layout: post
+title: Installing webmethods as a docker image
+---
 
 #Installing webmethods as a docker image
 
