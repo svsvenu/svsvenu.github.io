@@ -59,7 +59,7 @@ EXPOSE 5555
 
 ```
 
-###Step 3 - Save the docker image.
+###Step 3 - Build the base docker image.
 
 At this point, we need to save the image. We will be running the installer inside the docker image/container ( Still using the terms interchangeable,
 there might be a day where i could differentiate the nuances ). Go to your docker terminal, cd to the directory where you put the installers
@@ -70,6 +70,90 @@ and Dockerfile and run the following command
 docker build -q --rm -t svsvenu/wmbase .
 
 ```
+
+The options explained below
+	-q->
+	
+###Step 4 - Start the docker image
+
+Start the docker image that you just build by running the following command. You would need the tail command at the end or else docker will
+shut down the image as the main process has terminated. Appending the tail command keeps the process running and hence the container up
+
+docker run -d -P svsvenu/wmbase tail -f /dev/null
+
+If Everything went well you should see the container running, we could validate it by running the following
+
+docker ps
+
+###Step 5 - SSH into the docker container
+
+We will now get into the container and finish our installation, i.e run the installer inside the container. To get into the container
+run the following command
+
+docker exec -i -t <container_id> bash
+
+###Step 6 - Start the webmethods installation
+
+Since we are inside the container without a GUI to help us, the webmethods installation has to be command line. This can be accomplished 
+by running the following installer command.
+
+cd /tmp
+
+unzip wM_v9.8_Free+Trial_Keys.zip
+
+java -jar SoftwareAGInstaller20150415.jar -console -readImage webMFREEDownload98\(Linux64bit\).zip -installDir /opt/webm
+
+This should now begin a series of installation questions that you would need to answer with the help of your god given intelligence
+
+After the installation is complete, be sure to delete the installer files as they are nolonger needed. This will save some valuable 
+
+container size. 
+
+There has to be a modification made to /opt/webm/IntegrationServer/bin/server.sh. Append the following line to it so that the integration
+server runs in the container
+
+while true; do sleep 1000; done
+
+###Step 6 - Save the state of the image
+
+Get out of the shell by typing CTRL+p+q
+
+Commit the image after installation by running the following command
+
+docker commit <container_id> svsvenu/wmbase
+
+
+###Step 7 - Build a container that starts the Integration server
+
+In a new directory Create the following docker file with name Dockerfile
+
+```
+
+### Set the base image to the one we just built
+FROM svsvenu/wmbase
+
+USER root
+
+### File Author / Maintainer
+MAINTAINER "Venu" "svsvenu@gmail.com"
+
+EXPOSE 5555 
+ 
+### start the IS 
+ENTRYPOINT /opt/webm/IntegrationServer/bin/server.sh  
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
