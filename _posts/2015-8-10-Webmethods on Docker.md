@@ -35,7 +35,7 @@ a zip file sent to your url that has the all the keys that the installer needs. 
 
 ###Step 2 - Create a docker file 
 
-Create a file called 'Dockerfile' (case sensitive ) in the same directory as the ones we put the installer and images in.The contents of the
+Create a file called 'Dockerfile' (case sensitive ) in the same directory as the ones we put the installer and images from step-1 in.The contents of the
 docker file are below
 
 ```
@@ -58,6 +58,20 @@ EXPOSE 5555
 
 
 ```
+
+###Step 3 - Save the docker image.
+
+At this point, we need to save the image. We will be running the installer inside the docker image/container ( Still using the terms interchangeable,
+there might be a day where i could differentiate the nuances ). Go to your docker terminal, cd to the directory where you put the installers
+and Dockerfile and run the following command
+
+```
+
+docker build -q --rm -t svsvenu/wmbase .
+
+```
+
+
 
 
 
