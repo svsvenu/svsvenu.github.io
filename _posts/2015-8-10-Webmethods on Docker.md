@@ -144,7 +144,7 @@ ENTRYPOINT /opt/webm/IntegrationServer/bin/server.sh
 
 ```
 
-Rebuild this container as 
+Rebuild this container as  
 
 {% highlight java linenos%}
 
