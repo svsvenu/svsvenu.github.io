@@ -146,7 +146,7 @@ ENTRYPOINT /opt/webm/IntegrationServer/bin/server.sh
 
 Rebuild this container as 
 
-{% highlight java %}
+{% highlight java linenos%}
 
 Public static void main (String args){
 int i =0;
