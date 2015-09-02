@@ -179,7 +179,9 @@ docker build -q --rm -t svsvenu/wmrunning .
 
 ```
 
-###Step 9 Run the webmethods image. Notice that you dont need to append the tail command as we put an infinite loop at the
+###Step 9 
+
+Run the webmethods image. Notice that you dont need to append the tail command as we put an infinite loop at the
 end of the script that starts webmethods
 
 ```
