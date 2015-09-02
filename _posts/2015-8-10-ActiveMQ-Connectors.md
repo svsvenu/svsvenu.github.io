@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Embedded broker network Connector
+title: Embedded broker with a network connector
 ---
 
-![_config.yml]({{ site.baseurl }}/images/test.png)
+
+
+##Assumptions##
 
 Establish a connection from Embedded broker to a broker instance running outside a JVM in jboss MQ
 
