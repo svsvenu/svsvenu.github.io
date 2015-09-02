@@ -94,6 +94,12 @@ container running, we could validate it by running the following
 docker ps
 
 ```
+
+The result should look something like below
+
+![_config.yml]({{ site.baseurl }}/images/base-screenshot.png)
+
+
 ###Step 5 - Bash into the docker container
 
 We will now get into the container and finish our installation, i.e run the installer inside the container. To get into the container
@@ -166,7 +172,25 @@ ENTRYPOINT /opt/webm/IntegrationServer/bin/server.sh
 
 ```
 
-Run this docker file to create a 'runnable image'
+Create a docker image from this by running 
+
+```
+docker build -q --rm -t svsvenu/wmrunning .
+
+```
+
+###Step 9 Run the webmethods image. Notice that you dont need to append the tail command as we put an infinite loop at the
+end of the script that starts webmethods
+
+```
+docker run -d -P svsvenu/wmrunning 
+
+```
+
+
+
+
+
 
 
 
