@@ -20,8 +20,8 @@ install the software inside the container
 	
 ##Software##
 
-You would need docker installed on your windows/mac/linux machine. You can chose the right one for your flavor of os below 
-[docker-installation](https://docs.docker.com/installation).If you need a trial installation of webmethods, you can download it from below
+You would need docker installed on your windows/mac/linux machine. You can chose the right one for your flavor of os at 
+[docker-installation](https://docs.docker.com/installation).If you need a trial installation of webmethods, you can download it from 
 [Webmethods-installation](http://techcommunity.softwareag.com/ecosystem/communities/public/webmethods/contents/download/)
 
 ##Steps to build the image##
@@ -29,8 +29,9 @@ You would need docker installed on your windows/mac/linux machine. You can chose
 
 ###Step 1 - Pull the webmethods installation images
 
-The webmethods installer downloads 2 files. An image file and an installer file. In addition to these two files you will also have
-a zip file sent to your url that has the all the keys that the installer needs. Copy all the files into one folder
+The webmethods installer downloads two files. An image file and an installer file. In addition to these two files you will also have
+a zip file sent to your email that has the all the keys that the installer needs. Copy all the files into one folder. A screenshot of 
+my folder
 
 ![_config.yml]({{ site.baseurl }}/images/saginstaller.png)
 
@@ -63,7 +64,7 @@ EXPOSE 5555
 
 ###Step 3 - Build the base docker image.
 
-At this point, we need to save the image. We will be running the installer inside the docker image/container ( Still using the terms interchangeable,
+At this point, we need to build the image. We will be running the installer inside the docker image/container ( Still using the terms interchangeably,
 there might be a day where i could differentiate the nuances ). Go to your docker terminal, cd to the directory where you put the installers
 and Dockerfile and run the following command
 
@@ -72,25 +73,28 @@ and Dockerfile and run the following command
 docker build -q --rm -t svsvenu/wmbase .
 
 ```
-
-The options explained below
-	-q->
 	
 ###Step 4 - Start the docker image
 
-Start the docker image that you just build by running the following command. You would need the tail command at the end or else docker will
-shut down the image as the main process has terminated. Appending the tail command keeps the process running and hence the container up
+Start the docker image that you just build by running the following command. 
+
 ```
+
 docker run -d -P svsvenu/wmbase tail -f /dev/null
+
 ```
-If Everything went well you should see the container running, we could validate it by running the following
+
+You would need the tail command at the end or else docker will shut down the image as the main process has terminated. 
+Appending the tail command keeps the process running and hence the container up. If Everything went well you should see the 
+container running, we could validate it by running the following
+
 
 ```
 
 docker ps
 
 ```
-###Step 5 - SSH into the docker container
+###Step 5 - Bash into the docker container
 
 We will now get into the container and finish our installation, i.e run the installer inside the container. To get into the container
 run the following command
@@ -104,7 +108,7 @@ docker exec -i -t <container_id> bash
 ###Step 6 - Start the webmethods installation
 
 Since we are inside the container without a GUI to help us, the webmethods installation has to be command line. This can be accomplished 
-by running the following installer command.
+by running the following installer commands.
 
 ```
 
@@ -118,11 +122,10 @@ java -jar SoftwareAGInstaller20150415.jar -console -readImage webMFREEDownload98
 
 This should now begin a series of installation questions that you would need to answer with the help of your god given intelligence
 
-After the installation is complete, be sure to delete the installer files as they are nolonger needed. This will save some valuable 
-
-container size. 
+After the installation is complete, be sure to delete the installer files as they are nolonger needed. This will save some valuable container size. 
 
 There has to be a modification made to /opt/webm/IntegrationServer/bin/server.sh. Append the following line to it so that the integration
+
 server runs in the container
 
 ```
@@ -130,7 +133,7 @@ server runs in the container
 while true; do sleep 1000; done
 
 ```
-###Step 6 - Save the state of the image
+###Step 7 - Save the state of the image
 
 Get out of the shell by typing CTRL+p+q
 
@@ -142,7 +145,7 @@ docker commit <container_id> svsvenu/wmbase
 
 ```
 
-###Step 7 - Build a container that starts the Integration server
+###Step 8 - Build a container that starts the Integration server
 
 In a new directory Create the following docker file with name Dockerfile
 
