@@ -166,7 +166,7 @@ ENTRYPOINT /opt/webm/IntegrationServer/bin/server.sh
 
 ```
 
-Rebuild this container as  
+Run this docker file to create a 'runnable image'
 
 
 
