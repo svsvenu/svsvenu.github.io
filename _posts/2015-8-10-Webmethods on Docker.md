@@ -80,31 +80,31 @@ The options explained below
 
 Start the docker image that you just build by running the following command. You would need the tail command at the end or else docker will
 shut down the image as the main process has terminated. Appending the tail command keeps the process running and hence the container up
-
+```
 docker run -d -P svsvenu/wmbase tail -f /dev/null
-
+```
 If Everything went well you should see the container running, we could validate it by running the following
-
+```
 docker ps
-
+```
 ###Step 5 - SSH into the docker container
 
 We will now get into the container and finish our installation, i.e run the installer inside the container. To get into the container
 run the following command
-
+```
 docker exec -i -t <container_id> bash
-
+```
 ###Step 6 - Start the webmethods installation
 
 Since we are inside the container without a GUI to help us, the webmethods installation has to be command line. This can be accomplished 
 by running the following installer command.
-
+```
 cd /tmp
 
 unzip wM_v9.8_Free+Trial_Keys.zip
 
 java -jar SoftwareAGInstaller20150415.jar -console -readImage webMFREEDownload98\(Linux64bit\).zip -installDir /opt/webm
-
+```
 This should now begin a series of installation questions that you would need to answer with the help of your god given intelligence
 
 After the installation is complete, be sure to delete the installer files as they are nolonger needed. This will save some valuable 
@@ -113,17 +113,17 @@ container size.
 
 There has to be a modification made to /opt/webm/IntegrationServer/bin/server.sh. Append the following line to it so that the integration
 server runs in the container
-
+```
 while true; do sleep 1000; done
-
+```
 ###Step 6 - Save the state of the image
 
 Get out of the shell by typing CTRL+p+q
 
 Commit the image after installation by running the following command
-
+```
 docker commit <container_id> svsvenu/wmbase
-
+```
 
 ###Step 7 - Build a container that starts the Integration server
 
@@ -148,16 +148,7 @@ ENTRYPOINT /opt/webm/IntegrationServer/bin/server.sh
 
 Rebuild this container as  
 
-{% highlight java linenos%}
 
-Public static void main (String args){
-int i =0;
-
-i++;
-}
-
-
-{% endhighlight  %}
 
 
 
