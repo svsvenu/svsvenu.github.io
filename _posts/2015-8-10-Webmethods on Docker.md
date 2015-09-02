@@ -94,11 +94,13 @@ docker ps
 
 We will now get into the container and finish our installation, i.e run the installer inside the container. To get into the container
 run the following command
+
 ```
 
 docker exec -i -t <container_id> bash
 
 ```
+
 ###Step 6 - Start the webmethods installation
 
 Since we are inside the container without a GUI to help us, the webmethods installation has to be command line. This can be accomplished 
@@ -113,6 +115,7 @@ unzip wM_v9.8_Free+Trial_Keys.zip
 java -jar SoftwareAGInstaller20150415.jar -console -readImage webMFREEDownload98\(Linux64bit\).zip -installDir /opt/webm
 
 ```
+
 This should now begin a series of installation questions that you would need to answer with the help of your god given intelligence
 
 After the installation is complete, be sure to delete the installer files as they are nolonger needed. This will save some valuable 
