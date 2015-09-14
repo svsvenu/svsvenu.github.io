@@ -15,6 +15,9 @@ You would be requiring a Jboss active mq installation, It can be found at [jboss
 
 ##Creating an embedded broker##
 
+![_config.yml]({{ site.baseurl }}/images/amq/amq.png)
+
+
 You can programmatically create a broker in java in a stand alone client like below
 
 {% highlight java %}
