@@ -19,7 +19,7 @@ You would be requiring a Jboss active mq installation, It can be found at [jboss
 
 ###Creating embedded brokers###
 
-You can programmatically create brokers like below. I have chosen to have 3 brokers amq1, amq2 and amq3
+You can programmatically create brokers like below. I have chosen to have 3 brokers amq1, amq2, amq3
 
 {% highlight java %}
 
@@ -46,12 +46,24 @@ open up 2 ports
 ###Adding network connectors###
 
 Network connectors are used internally by the network of brokers to forward messages for load balancing. They
-are configured on the ports that we opened on the broker
+are configured on the ports that we opened on the broker. The brokers are connected in such a way that the
+network connector on broker1 is set to connect to broker2 establishing a one-way communication from broker1 to
+broker2. The same is done from broker2 to broker3. 
+
+{% highlight java %}
+			
+	        broker.addConnector("tcp://localhost:" + jmsPortNum);
+	        
+	        broker.addConnector("tcp://localhost:" + networkPortNum);
+
+{% endhighlight %}
+
+###Producers and consumers###
+
+With the setup of the three brokers as above, we will now connect a producer to the queue on broker1 and a consumer on
+broker3. The producer will send a message to queue called 'TEST' on broker1 and the consumer is looking for messages on 
+a queue called 'TEST' on broker3. The message that was sent to broker1 will go to broker2 and on to broker3 making 2 hops
+to reach the consumer on 3.
 
 
-Establish a connection from Embedded broker to a broker instance running outside a JVM in jboss MQ
-
-Jboss AMQ provides a way of sending messages locally(Within the same JVM) to an embedded broker that created/accessed within the same JVM. 
-This broker can in turn forward messages to a broker instance that is running on a separate instance
-You can find the code to create and forward messages below
 
