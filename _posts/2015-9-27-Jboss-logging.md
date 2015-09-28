@@ -55,4 +55,16 @@ The rest of the api is just like log4j.
 
 ##Logger hierarchy
 
+This might be a known fact for most of you familiar with log4j, but this is something that never seems
+to find a home is my permanent memory recesses. If iam in a class named
+
+xxx.yyy.zzz.Myclass
+
+and declare a logger like below
+
+	private static final Logger logger = Logger.getLogger(xxx.yyy.zzz.Myclass.class.getName());
+
+Inherently you established a hierarchy. The parent of xxx.yyy.zzz.Myclass is xxx.yyy.zzz, its parent
+is xxx.yyy and so on. Hope you dont need help is getting the pattern. Levels are optionally set at the
+logger level, if not, the parent's level is inherited.
 
