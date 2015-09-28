@@ -68,3 +68,21 @@ Inherently you established a hierarchy. The parent of xxx.yyy.zzz.Myclass is xxx
 is xxx.yyy and so on. Hope you dont need help is getting the pattern. Levels are optionally set at the
 logger level, if not, the parent's level is inherited.
 
+##The cool part
+
+If you have been scrolling your mouse wheels off to get the cool part, here is it. You can control
+the log levels in run-time w/o requiring server restart or application reload or something crazy
+your bored developer has written. 
+
+##straight UI homey.
+
+To change the logger at run time, open the Jboss console and go to profile->core->logging. Find the picture
+below in addition to my 1000 words
+
+![_config.yml]({{ site.baseurl }}/logging/logging.png)
+
+
+
+
+
+
