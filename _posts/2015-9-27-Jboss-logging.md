@@ -79,7 +79,7 @@ your bored developer has written.
 To change the logger at run time, open the Jboss console and go to profile->core->logging. Find the picture
 below in addition to my 1000 words
 
-![_config.yml]({{ site.baseurl }}/logging/logging.png)
+![_config.yml]({{ site.baseurl }}/images/logging/logging.png)
 
 
 
