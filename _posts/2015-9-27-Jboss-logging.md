@@ -81,6 +81,12 @@ below in addition to my 1000 words
 
 ![_config.yml]({{ site.baseurl }}/images/logging/logging.png)
 
+##Creating a custom handler
+
+To add a handler that your logger uses, click on the handler tab, to add a custom handler
+
+![_config.yml]({{ site.baseurl }}/images/logging/handler.png)
+
 
 
 
