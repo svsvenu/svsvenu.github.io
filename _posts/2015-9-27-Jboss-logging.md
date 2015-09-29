@@ -74,7 +74,7 @@ If you have been scrolling your mouse wheels off to get the cool part, here is i
 the log levels in run-time w/o requiring server restart or application reload or something crazy
 your bored developer has written. 
 
-##straight UI homey.
+##straight UI homey
 
 To change the logger at run time, open the Jboss console and go to profile->core->logging. Find the picture
 below in addition to my 1000 words
@@ -83,10 +83,18 @@ below in addition to my 1000 words
 
 ##Creating a custom handler
 
-To add a handler that your logger uses, click on the handler tab, to add a custom handler
+To add a handler that your logger uses, click on the handler tab, to add a custom handler. The Narcissist
+that i am,  i named it venu-console
 
 ![_config.yml]({{ site.baseurl }}/images/logging/handler.png)
 
+##Bring it home
+
+To make many a coach happy, we are now going to tie the handler to the logger and put it all in a pretty
+package that is sports center worthy.A sample code that uses jboss logging is below. Focus on the logging
+part but feel free to snoop around
+
+[This guy really wrote some code](https://github.com/svsvenu/blog/blob/master/kitchensink/src/main/java/com/venu/jsf/WelcomeBean.java)
 
 
 
