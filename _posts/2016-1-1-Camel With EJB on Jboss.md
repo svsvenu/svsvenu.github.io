@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Jboss application logging
+title: Camel With EJB
 ---
 
 ##Assumptions##
 
-Need to know a little bit about log4j.This shows some of the cool features of jboss logging
+If you have installed a Fuse service works installation of EJB and chose not to use the switchyard
+integration platform but use the camel that comes bundled with it for your integration application,
+this blog will guide you through the set up process.
 
 ##Software##
 
-Jboss EAP6
+Jboss FSW installation, Jboss developer studio or eclipse
 
 ##Setting up an application to use Jboss logging
 
