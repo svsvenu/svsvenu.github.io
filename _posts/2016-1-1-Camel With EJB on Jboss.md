@@ -13,10 +13,11 @@ this blog will guide you through the set up process.
 
 Jboss FSW installation, Jboss developer studio or eclipse
 
-##Setting up an application to use Jboss logging
+##Bootstrapping the camel context
 
-If you choose to use jboss logging as the logging back bone for the application you are building
-then you would need to import the jars into your projects. The maven co-ordinates for this are
+There are many ways of doing something on startup when it comes to a EE application. The easiest way (atleast to me)
+is the singleton startup stateless session bean. Slap on a couple of annotations to your class and you are 
+on your merry way.
 
 ```
 
@@ -33,7 +34,7 @@ If you still are using ant, please dont make fun of your mom saying she cant wor
 scope is set to provided as the Jboss EAP server comes built in with jboss logging which is essentially
 a wrapper over log4j.
 
-##Importing the classes
+##Configuring the context
 
 To use jboss logging, import the org.jboss.logging.Logger. to instantiate it use 
 
