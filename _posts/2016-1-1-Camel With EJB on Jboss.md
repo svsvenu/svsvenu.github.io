@@ -17,7 +17,8 @@ Jboss FSW installation, Jboss developer studio or eclipse
 
 There are many ways of doing something on startup when it comes to a EE application. The easiest way (atleast to me)
 is the singleton startup stateless session bean. Slap on a couple of annotations to your class and you are 
-on your merry way. This can be seen in 
+on your merry way. The application if using cxf will however will not deploy as the installation has some missing
+jar files. The deployment will flame out complaining about header filter
 
 ```
 
@@ -30,7 +31,29 @@ on your merry way. This can be seen in
 
 ```
 
-##Configuring the context
+##Fixing the deployment
+
+Since we are using the cxf component, the deployment will complain about not being able to find the class
+The exception you will see is below
+
+```
+
+Caused by: java.lang.ClassNotFoundException: org.apache.camel.component.cxf.common.header.CxfHeaderFilterStrategy from [Module "org.apache.camel.cxf:main" from local module loader @2f41b041 (finder: local module finder @19a93a4 (roots: /Users/venu/jboss-eap-6.1/modules,/Users/venu/jboss-eap-6.1/modules/system/layers/soa,/Users/venu/jboss-eap-6.1/modules/system/layers/sramp,/Users/venu/jboss-eap-6.1/modules/system/layers/base))]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:196) [jboss-modules.jar:1.2.2.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:444) [jboss-modules.jar:1.2.2.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:432) [jboss-modules.jar:1.2.2.Final-redhat-1]
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:374) [jboss-modules.jar:1.2.2.Final-redhat-1]
+
+
+```
+
+If we learnt the hard way that reading the exceptions is a helpful excercise, we need to add the following jar file
+camel-cxf-transport-2.16.1 to the org.apache.camel.cxf module and update the module.xml file with the following
+<resource-root path="camel-cxf-transport-2.16.1.jar"/> . You can download the the file from 
+http://mvnrepository.com/artifact/org.apache.camel/camel-cxf-transport/2.16.1
+ 
+
+
 
 
 
