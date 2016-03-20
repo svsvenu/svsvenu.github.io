@@ -5,8 +5,11 @@ title: Venu personal notes
 
 ##Tomcat##
 Go to tomcat directory
+
 cd /Users/venusurampudi/Downloads/apache-tomcat-7.0.62
+
 To start tomcat in jpda mode 
+
 ./catalina.sh jpda start
 
 
