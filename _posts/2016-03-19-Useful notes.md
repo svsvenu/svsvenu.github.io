@@ -1,15 +1,19 @@
 ---
 layout: post
-title: Camel With EJB
+title: Venu personal notes
 ---
 
-##Assumptions##
+##Tomcat##
+Go to tomcat directory
+cd /Users/venusurampudi/Downloads/apache-tomcat-7.0.62
+To start tomcat in jpda mode 
+./catalina.sh jpda start
 
-If you have installed a Fuse service works installation of EJB and chose not to use the switchyard
-integration platform but use the camel that comes bundled with it for your integration application,
-this blog will guide you through the set up process.
 
-##Software##
+##MongoDB##
+
+Go to Mongodb
+cd /Users/venusurampudi/Downloads/mongodb-osx-x86_64-enterprise-3.2.3/bin
 
 Jboss FSW installation, Jboss developer studio or eclipse
 
