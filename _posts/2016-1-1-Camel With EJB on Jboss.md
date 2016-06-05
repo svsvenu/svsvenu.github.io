@@ -3,13 +3,13 @@ layout: post
 title: Camel With EJB
 ---
 
-##Assumptions##
+##Assumptions
 
 If you have installed a Fuse service works installation of EJB and chose not to use the switchyard
 integration platform but use the camel that comes bundled with it for your integration application,
 this blog will guide you through the set up process.
 
-##Software##
+##Software
 
 Jboss FSW installation, Jboss developer studio or eclipse
 

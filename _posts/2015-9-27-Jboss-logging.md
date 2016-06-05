@@ -3,11 +3,11 @@ layout: post
 title: Jboss application logging
 ---
 
-##Assumptions##
+##Assumptions
 
 Need to know a little bit about log4j.This shows some of the cool features of jboss logging
 
-##Software##
+##Software
 
 Jboss EAP6
 
