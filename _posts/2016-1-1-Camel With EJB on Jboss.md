@@ -3,17 +3,17 @@ layout: post
 title: Camel With EJB
 ---
 
-##Assumptions
+## Assumptions
 
 If you have installed a Fuse service works installation of EJB and chose not to use the switchyard
 integration platform but use the camel that comes bundled with it for your integration application,
 this blog will guide you through the set up process.
 
-##Software
+## Software
 
 Jboss FSW installation, Jboss developer studio or eclipse
 
-##Bootstrapping the camel context
+## Bootstrapping the camel context
 
 There are many ways of doing something on startup when it comes to a EE application. The easiest way (atleast to me)
 is the singleton startup stateless session bean. Slap on a couple of annotations to your class and you are 
@@ -31,7 +31,7 @@ jar files. The deployment will flame out complaining about header filter
 
 ```
 
-##Fixing the deployment
+## Fixing the deployment
 
 Since we are using the cxf component, the deployment will complain about not being able to find the class
 The exception you will see is below
