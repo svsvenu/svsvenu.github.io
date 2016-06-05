@@ -24,21 +24,21 @@ about a few obvious things, where's the dang WSDL, what is the root package name
 To weed the mundane from my otherwise mundane life, i am also using a plugin that deploys the war file to the locally sourced
 Jboss server. Turnkey ya'll
 
-##Plugin exploits
+## Plugin exploits
 
 After we have run a clean install on the POM file, and hit refresh on our project we should be able to see the spoils of our plugin
 run. a folder called 'generated' is created and the root folder that was supplied to the plugin configuration is created, the generated
 files (JaxB annotated ) are created underneath it.Two classes of particular interest are the interface that represents the port and the
 class that represents the Service.
 
-##The programmer's work
+## The programmer's work
 
 Ok sir/mam, a lot of work has been done for you by the benevolent open source community, but you want to leave a mark (stain?) too. We would
 begin by implementing the port interface, in our case its "HumanResource". In addition to implementing it, we have to let the EE container
 know that your intentions are to expose it as a webservice, hellooo annotations. The class itself is annotated as webservice(javax.jws.WebService;) and the the method
 is annotated as Webmethod(javax.jws.WebMethod). Now that you are handed the java objects, you can turn around and do your business, no pun intended.
 
-##Fruits of labor
+## Fruits of labor
 
 Enjoy them while they still ripe. The war should deploy fine and tell you that your webservice is now available for consumption. A quick cyberhunt on
 google will tell you that SOAPUI is a popular tool to test your webservice and it's got to to true if its on the internet.
