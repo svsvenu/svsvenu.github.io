@@ -5,29 +5,29 @@ title: Installing webmethods as a docker image
 
 
 
-##Assumptions
+## Assumptions
 
 This blog assumes that you are familiar with docker and webmethods.This will only guide you through
 the steps of installing webmethods on a docker container and be able to run it as you would any other
 docker image.
 	
-##Challenges
+## Challenges
 
 There are certain challenges that are unique to 'installable' software and docker. For example, if you want
 to install jboss as an image, you would just copy the installation directory and its ready to go. But
 with software that needs installation you would need to copy the installers into the base image and then
 install the software inside the container
 	
-##Software
+## Software
 
 You would need docker installed on your windows/mac/linux machine. You can chose the right one for your flavor of os at 
 [docker-installation](https://docs.docker.com/installation).If you need a trial installation of webmethods, you can download it from 
 [Webmethods-installation](http://techcommunity.softwareag.com/ecosystem/communities/public/webmethods/contents/download/)
 
-##Steps to build the image
+## Steps to build the image
 
 
-###Step 1 - Pull the webmethods installation images
+### Step 1 - Pull the webmethods installation images
 
 The webmethods installer downloads two files. An image file and an installer file. In addition to these two files you will also have
 a zip file sent to your email that has the all the keys that the installer needs. Copy all the files into one folder. A screenshot of 
@@ -36,7 +36,7 @@ my folder
 ![_config.yml]({{ site.baseurl }}/images/saginstaller.png)
 
 
-###Step 2 - Create a docker file 
+### Step 2 - Create a docker file
 
 Create a file called 'Dockerfile' (case sensitive ) in the same directory as the ones we put the installer and images from step-1 in.The contents of the
 docker file are below
@@ -62,7 +62,7 @@ EXPOSE 5555
 
 ```
 
-###Step 3 - Build the base docker image.
+### Step 3 - Build the base docker image.
 
 At this point, we need to build the image. We will be running the installer inside the docker image/container ( Still using the terms interchangeably,
 there might be a day where i could differentiate the nuances ). Go to your docker terminal, cd to the directory where you put the installers
@@ -74,7 +74,7 @@ docker build -q --rm -t svsvenu/wmbase .
 
 ```
 	
-###Step 4 - Start the docker image
+### Step 4 - Start the docker image
 
 Start the docker image that you just build by running the following command. 
 
@@ -100,7 +100,7 @@ The result should look something like below
 ![_config.yml]({{ site.baseurl }}/images/base-screenshot.png)
 
 
-###Step 5 - Bash into the docker container
+### Step 5 - Bash into the docker container
 
 We will now get into the container and finish our installation, i.e run the installer inside the container. To get into the container
 run the following command
@@ -111,7 +111,7 @@ docker exec -i -t <container_id> bash
 
 ```
 
-###Step 6 - Start the webmethods installation
+### Step 6 - Start the webmethods installation
 
 Since we are inside the container without a GUI to help us, the webmethods installation has to be command line. This can be accomplished 
 by running the following installer commands.
@@ -139,7 +139,7 @@ server runs in the container
 while true; do sleep 1000; done
 
 ```
-###Step 7 - Save the state of the image
+### Step 7 - Save the state of the image
 
 Get out of the shell by typing CTRL+p+q
 
@@ -151,7 +151,7 @@ docker commit <container_id> svsvenu/wmbase
 
 ```
 
-###Step 8 - Build a container that starts the Integration server
+### Step 8 - Build a container that starts the Integration server
 
 In a new directory Create the following docker file with name Dockerfile
 
@@ -179,7 +179,7 @@ docker build -q --rm -t svsvenu/wmrunning .
 
 ```
 
-###Step 9 
+### Step 9
 
 Run the webmethods image. Notice that you dont need to append the tail command as we put an infinite loop at the
 end of the script that starts webmethods
