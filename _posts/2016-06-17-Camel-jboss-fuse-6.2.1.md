@@ -1,18 +1,22 @@
 ---
 layout: post
-title: WSDL first webservice
+title: Camel with Jboss fuse 6.2.1
 ---
 
 ## Introduction
 
-This blog explains the use of a maven plugin to import a wsdl that is provided. Usually WSDLs come
-broken down as WSDL files and XSD files, the break down gives organizations a fake sense of professionalism
-when its perfectly ok to stick em all in one file, yea i said it.
+This is a blog about how easy it is to deploy camel routes in the newly release jboss fuse version 6.2.1. There have been
+enough jboss fuses in the market to short circuit yours but jboss tells me this is the real deal. Truth my friends has an
+expiration. Spring and camel are like two peas in a pod like forest and jenny, EJB and camel...? more like kevin love and
+the cavaliers. Any camel book you pick up tells you how to compose routes, they are easy to learn and might
+even be responsible for an endorphin release, but then the "route" you take for Context setup is more of a highway to hell.
+There are many ways to resolve it but the road is rocky.
 
-## Maven setup
+## I have a route, can some one please Eff'n deploy the Eff'n route in an Eff'n containter
 
-One of the reasons i am writing this blog is the options available for pulling in a WSDL, as one who easily overwhelmed by
-choices i want to document one method that works all the way. The plugin i am using has the co-ordinates below
+You Eff's have been answered. Say hello to the brand spanking new Jboss fuse 6.2.1. It comes in two flavors, OSGI and EJB. I have
+adopted the EJB version courtesy familiarity and market demand.
+
 
 ```
          <groupId>org.codehaus.mojo</groupId>

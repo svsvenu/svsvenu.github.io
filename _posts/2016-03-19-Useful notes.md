@@ -3,7 +3,7 @@ layout: post
 title: Venu personal notes
 ---
 
-##Tomcat##
+## Tomcat
 Go to tomcat directory
 
 cd /Users/venusurampudi/Downloads/apache-tomcat-7.0.62
@@ -12,8 +12,7 @@ To start tomcat in jpda mode
 
 ./catalina.sh jpda start
 
-
-##MongoDB##
+## MongoDB
 
 Go to Mongodb
 cd /Users/venusurampudi/Downloads/mongodb-osx-x86_64-enterprise-3.2.3/bin
@@ -23,7 +22,7 @@ Start mongodb
 
 Jboss FSW installation, Jboss developer studio or eclipse
 
-##Bootstrapping the camel context
+## Bootstrapping the camel context
 
 There are many ways of doing something on startup when it comes to a EE application. The easiest way (atleast to me)
 is the singleton startup stateless session bean. Slap on a couple of annotations to your class and you are 
