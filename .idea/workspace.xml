@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="627c9aa8-d4b3-4adc-aa2d-77549817692e" name="Default" comment="webservice with maven">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-07-19-Jboss Datagrid peer to peer.md" afterPath="$PROJECT_DIR$/_posts/2016-07-19-Jboss Datagrid peer to peer.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Venu_blog.iws" />
@@ -86,7 +85,7 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.72077924">
-              <caret line="39" column="100" selection-start-line="39" selection-start-column="100" selection-end-line="39" selection-end-column="100" />
+              <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -539,7 +538,7 @@
       <workItem from="1466492675779" duration="2113000" />
       <workItem from="1468415287403" duration="5931000" />
       <workItem from="1469479802591" duration="27000" />
-      <workItem from="1470059992171" duration="9512000" />
+      <workItem from="1470059992171" duration="9921000" />
     </task>
     <task id="LOCAL-00001" summary="webservice with maven">
       <created>1464839764537</created>
@@ -623,7 +622,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37527000" />
+    <option name="totallyTimeSpent" value="37936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2036" height="1129" extended-state="0" />
@@ -1128,7 +1127,7 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72077924">
-          <caret line="39" column="100" selection-start-line="39" selection-start-column="100" selection-end-line="39" selection-end-column="100" />
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
           <folding />
         </state>
       </provider>
