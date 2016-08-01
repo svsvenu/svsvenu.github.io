@@ -1,16 +1,20 @@
 ---
 layout: post
-title: Peer to Peer Jboss data grid
+title: Peer to Peer  Jboss data grid
 ---
 
 ## Introduction
 
-This is a blog about how easy it is to deploy camel routes in the newly release jboss fuse version 6.2.1. There have been
-enough jboss fuses in the market to short circuit yours but jboss tells me this is the real deal. Truth my friends has an
-expiration. Spring and camel are like two peas in a pod like forest and jenny, EJB and camel...? more like kevin love and
-the cavaliers. Any camel book you pick up tells you how to compose routes, they are easy to learn and might
-even be responsible for an endorphin release, but then the "route" you take for Context setup is more of a highway to hell.
-There are many ways to resolve it but the road is rocky.
+This blogs explains the setup of a distributed cache whose keys and values are dispersed across nodes that are
+set up to be part of the the cluster. The access to the keys and values from any of the participating nodes is
+as though its available locally, there is no need for a centralized server ( although it is supported ) to serve up
+they keys, nodes can join and leave the cluster as they choose to. The grid will attempt to rebalance the load across all
+the available nodes ( evenly?). 1k word version
+
+![_config.yml]({{ site.baseurl }}/images/jdg/jdg.png)
+
+
+
 
 ## I have a route, can some one please Eff'n deploy the Eff'n route in an Eff'n containter
 

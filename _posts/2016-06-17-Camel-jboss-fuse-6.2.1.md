@@ -15,18 +15,20 @@ There are many ways to resolve it but the road is rocky.
 ## I have a route, can some one please Eff'n deploy the Eff'n route in an Eff'n containter
 
 You Eff's have been answered. Say hello to the brand spanking new Jboss fuse 6.2.1. It comes in two flavors, OSGI and EJB. I have
-adopted the EJB version courtesy familiarity and market demand.
+adopted the EJB version courtesy familiarity and market demand. With 6.2.1 in your bag, you can just inject
+the camel context pretty much anywhere in your application and roll with it. Its pre configured with a whole
+bunch of components, more than enough to get us going.
 
 
 ```
-         <groupId>org.codehaus.mojo</groupId>
-         <artifactId>jaxws-maven-plugin</artifactId>
-         <version>1.12</version>
+
+@Startup
+@ApplicationScoped
+@ContextName("cdi-context")
+
 ```
-If my blog stands the test of time, the version might change and this would be 'classic'. The plugin then needs to be told
-about a few obvious things, where's the dang WSDL, what is the root package name, whose door step do i drop new born generated files.
-To weed the mundane from my otherwise mundane life, i am also using a plugin that deploys the war file to the locally sourced
-Jboss server. Turnkey ya'll
+At this point all there is left to do is to add our route to the context that has been configured by the
+container.
 
 ## Plugin exploits
 
