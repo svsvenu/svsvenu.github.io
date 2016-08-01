@@ -9,47 +9,35 @@ This blogs explains the setup of a distributed cache whose keys and values are d
 set up to be part of the the cluster. The access to the keys and values from any of the participating nodes is
 as though its available locally, there is no need for a centralized server ( although it is supported ) to serve up
 they keys, nodes can join and leave the cluster as they choose to. The grid will attempt to rebalance the load across all
-the available nodes ( evenly?). 1k word version
+the available nodes ( evenly?). 1k word version below
 
 ![_config.yml]({{ site.baseurl }}/images/jdg/jdg.png)
 
 
+## The jgroups.xml file
+
+This is where you go to make the nodes aware of each other's existence. The main choice staring in your face is
+the use of TCP or UDP. Not that i am a networking maven, but the one thing i told myself to clamber out of the predicament
+is for TCP, you would need to know the participating nodes in advance as opposed to UDP where you would just multicast
+a.k.a self discover. I am currently using TCP, more because this UDP does not seem to penetrate my brain cells, yet.
 
 
-## I have a route, can some one please Eff'n deploy the Eff'n route in an Eff'n containter
+## The lone wolf
 
-You Eff's have been answered. Say hello to the brand spanking new Jboss fuse 6.2.1. It comes in two flavors, OSGI and EJB. I have
-adopted the EJB version courtesy familiarity and market demand.
+We will start out process by simply bringing up a solo node with a cache into which we will relentlessly feed keys and values, Its
+fairly conspicuous that the keys and values will be stored locally. We will print out the count of keys ( we set the flag that will
+only look for local keys ) and let the key count go to say 100.
 
+## The reinforcements
 
-```
-         <groupId>org.codehaus.mojo</groupId>
-         <artifactId>jaxws-maven-plugin</artifactId>
-         <version>1.12</version>
-```
-If my blog stands the test of time, the version might change and this would be 'classic'. The plugin then needs to be told
-about a few obvious things, where's the dang WSDL, what is the root package name, whose door step do i drop new born generated files.
-To weed the mundane from my otherwise mundane life, i am also using a plugin that deploys the war file to the locally sourced
-Jboss server. Turnkey ya'll
+Now that you see this one node busting at the seams with the cache contents, lets send some reinforcemnts in the form of another
+node. This would join the cluster and share the load. As soon as the node joins the cluster, you would see the cache contents get
+redistributed as evident by a sudden drop in the cache count in the first node and a corresponding spike in the second. If you
+care to inspect the details, you can see some of the keys leaving one node and appearing on the other
 
-## Plugin exploits
+## Sharing is caring
 
-After we have run a clean install on the POM file, and hit refresh on our project we should be able to see the spoils of our plugin
-run. a folder called 'generated' is created and the root folder that was supplied to the plugin configuration is created, the generated
-files (JaxB annotated ) are created underneath it.Two classes of particular interest are the interface that represents the port and the
-class that represents the Service.
-
-## The programmer's work
-
-Ok sir/mam, a lot of work has been done for you by the benevolent open source community, but you want to leave a mark (stain?) too. We would
-begin by implementing the port interface, in our case its "HumanResource". In addition to implementing it, we have to let the EE container
-know that your intentions are to expose it as a webservice, hellooo annotations. The class itself is annotated as webservice(javax.jws.WebService;) and the the method
-is annotated as Webmethod(javax.jws.WebMethod). Now that you are handed the java objects, you can turn around and do your business, no pun intended.
-
-## Fruits of labor
-
-Enjoy them while they still ripe. The war should deploy fine and tell you that your webservice is now available for consumption. A quick cyberhunt on
-google will tell you that SOAPUI is a popular tool to test your webservice and it's got to to true if its on the internet.
+We can extend this concept and add 'n' nodes which means more heaps that chip in to carry the load.
 
 
 
