@@ -23,4 +23,6 @@ Enter Naked lunch..
 I got a huge man crush on Anthony Bourdain and will likely make him uncomfortable one of these days i plan on getting him to sign an
 autograph, location discreet. On his trip to tangier, he brought up naked lunch and william s burroughs. He killed his wife, was
 homosexual, junkie and was from a suburban family, i'd say he is a five tool player of authors. The best way i can think of to
-describe naked lunch is that burroughs threw a bunch of dirt at people and some claim they found diamonds in it.
+describe naked lunch is that burroughs pissed on people and told them it was raining, they thanked him and the weather gods. Its
+a revulsive cocktail of devious sex, human excreta and everything else that would get ur dinner reversing its course, but then
+isnt authoring judged by the potency of reception?
