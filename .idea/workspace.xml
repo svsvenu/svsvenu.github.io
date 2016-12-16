@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="627c9aa8-d4b3-4adc-aa2d-77549817692e" name="Default" comment="webservice with maven">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/camel_split_aggregate.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2016-12-13-Camel split and aggregate with JDG repository.md" afterPath="$PROJECT_DIR$/_posts/2016-12-13-Camel split and aggregate with JDG repository.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -90,8 +89,8 @@
       <file leaf-file-name="2016-12-13-Camel split and aggregate with JDG repository.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2016-12-13-Camel split and aggregate with JDG repository.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5313352">
-              <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.59128064">
+              <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -543,7 +542,7 @@
       <workItem from="1480048112587" duration="1043000" />
       <workItem from="1480570722178" duration="39000" />
       <workItem from="1480570780822" duration="388000" />
-      <workItem from="1481680062965" duration="3072000" />
+      <workItem from="1481680062965" duration="8886000" />
     </task>
     <task id="LOCAL-00001" summary="webservice with maven">
       <created>1464839764537</created>
@@ -627,10 +626,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58681000" />
+    <option name="totallyTimeSpent" value="64495000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="731" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="731" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1112,8 +1111,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-12-13-Camel split and aggregate with JDG repository.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5313352">
-          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.59128064">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding />
         </state>
       </provider>
