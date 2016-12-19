@@ -46,6 +46,6 @@ something persisted, all the exchanges meeting a certain criteria yada yada.. sa
 ## Object stores
 
 JDG provides a way of storing objects in a remote server using google's own protobuf protocol, a monster topic in itself but the singular and
-salient point of relevance is it can store serializable objects. You can check out some code here, if you looking for some play dough. [JDG remote queries]
-(https://github.com/svsvenu/poc/tree/master/jdg-remote-query). In this case i am storing what the camel repository needs and some other metadata
-that would help me probe the system by inspecting the data.
+salient point of relevance is it can store serializable objects. You can check out some code here, if you looking for some play dough.
+[JDG remote queries](https://github.com/svsvenu/poc/tree/master/jdg-remote-query). In this case i am storing what the camel repository
+needs and some other metadata that would help me probe the system by inspecting the data.
