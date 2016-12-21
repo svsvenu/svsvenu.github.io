@@ -9,10 +9,13 @@ OOTB camel provides a way to split a large file, process it and aggregate the pr
 is done in memory that comes with the obvious pitfalls of volatility and availability. If the split and aggregate process
 needs to be backed up with persistence, then we need to implement the [RecoverableAggregationRepository](
 https://camel.apache.org/maven/camel-2.15.0/camel-core/apidocs/org/apache/camel/spi/RecoverableAggregationRepository.html).
+There are already implementations out there for leveldb and hazelcast, this blog helps you set it up with jboss data grid,
+another popular key/value pair type cache/object store.
+
+
 
 ![_config.yml]({{ site.baseurl }}/images/camel_split_aggregate.png)
 
-There are already implementations out there for leveldb and hazelcast, this blog helps you set it up with jboss data grid
 
 ## The splitter
 
@@ -29,13 +32,13 @@ back into the exchange body.
 ## Aggregation
 
 The aggregation process then kicks off at the tail end of the chunk processing, first camel calls the implementation
-of AggregationStrategy ( implemented inline as a private static class ArrayListAggregationStrategy ) , after this method execution is complete
-camel checks to see if there is a key/value pair in our persistence store (JDG) by calling the get method on the class
+of AggregationStrategy ( implemented inline as a private static class ArrayListAggregationStrategy ) , after this method execution
+is complete camel checks to see if there is a key/value pair in our persistence store (JDG) by calling the get method on the class
 implementing RecoverableAggregationRepository ( In our case this is RecoverableAggregationRepositoryImpl ).
 The next step in the process would be a call to the add method on the same class, Since our strategy is to keep
 aggregating to the Arraylist,after every call, the arraylist represents the current and transient set of results accumulated.
 
-## persistence
+## Persistence
 
 As the title of the blog states, persistence is achieved by implementing RecoverableAggregationRepository interface, and the methods
 of particular relevance are add,get,remove and confirm, what's passed to them has to be saved, removed, retrieved etal, this is where
@@ -49,3 +52,14 @@ JDG provides a way of storing objects in a remote server using google's own prot
 salient point of relevance is it can store serializable objects. You can check out some code here, if you looking for some play dough.
 [JDG remote queries](https://github.com/svsvenu/poc/tree/master/jdg-remote-query). In this case i am storing what the camel repository
 needs and some other metadata that would help me probe the system by inspecting the data.
+
+## Code and setup
+
+
+
+- Download the [jboss data grid server](https://developers.redhat.com/download-manager/file/jboss-datagrid-6.4.0.GA.zip)
+- Start the jboss data grid server by running the following command
+
+
+
+The simple implementation, showing this concept is is checked into github [source](https://github.com/svsvenu/poc/tree/master/camel-split-aggregate)
