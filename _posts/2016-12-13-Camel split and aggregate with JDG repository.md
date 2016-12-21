@@ -60,6 +60,12 @@ needs and some other metadata that would help me probe the system by inspecting 
 - Download the [jboss data grid server](https://developers.redhat.com/download-manager/file/jboss-datagrid-6.4.0.GA.zip)
 - Start the jboss data grid server by running the following command
 
+```
+<download directory>jboss-datagrid-6.4.0-server/bin/standalone.sh
+```
+
+- The jdg cache that we will use for this purposes is 'default' which comes with the installation
+
 
 
 The simple implementation, showing this concept is is checked into github [source](https://github.com/svsvenu/poc/tree/master/camel-split-aggregate)
