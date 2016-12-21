@@ -57,15 +57,22 @@ needs and some other metadata that would help me probe the system by inspecting 
 
 
 
-- Download the [jboss data grid server](https://developers.redhat.com/download-manager/file/jboss-datagrid-6.4.0.GA.zip)
+- Download the [jboss data grid server](https://developers.redhat.com/download-manager/file/jboss-datagrid-6.4.0.GA.zip), using 6.4 for this
+  tutorial
 - Start the jboss data grid server by running the following command
 
 ```
-<download directory>jboss-datagrid-6.4.0-server/bin/standalone.sh
+<download directory>/jboss-datagrid-6.4.0-server/bin/standalone.sh
 ```
 
 - The jdg cache that we will use for this purposes is 'default' which comes with the installation
+- I am using [fuse 6.2.1](https://developers.redhat.com/download-manager/file/fuse-eap-installer-6.2.1.redhat-084.jar) ( on EAP platform ) as the server hosting it.
+- Start the fuse server by running
 
+```
+<fuse installation>/EAP-6.4.0/bin/standalone.sh
+```
 
-
-The simple implementation, showing this concept is is checked into github [source](https://github.com/svsvenu/poc/tree/master/camel-split-aggregate)
+- The simple implementation, showing this concept is is checked into github [source](https://github.com/svsvenu/poc/tree/master/camel-split-aggregate)
+- To run the program using maven, plese run mvn clean install ( it has a built in plugin that will deploy the application to localhost)
+- After every 30 seconds, the scheduler gets kicked off and you can see the steps in the flow chart get executed.
