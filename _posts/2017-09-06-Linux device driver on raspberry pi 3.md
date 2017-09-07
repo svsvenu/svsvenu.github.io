@@ -1,22 +1,21 @@
 ---
 layout: post
-title: Camel split and aggregate with Jboss data grid for persistence
+title: Linux device driver on raspberry pi 3
 ---
 
 ## Assumptions
 
-This blog assumes that the user is familiar with infinispan cache/ jboss data grid, camel and J2EE. The focus here is
-specifically on camel's features of splitting and aggregating larger data sets.
+This blog assumes that you have dispensed your disposable and have become a proud owner of raspberry pi 3,
+installed raspbian on it ( or bought a kit with it pre installed). I can only imagine the interest you would garner at
+your local bar.
 
 
 ## Introduction
 
-OOTB camel provides a way to split a large file, process it and aggregate the processed chunks, however the process
-is done in memory that comes with the obvious pitfalls of volatility and availability. If the split and aggregate process
-needs to be backed up with persistence, then we need to implement the [RecoverableAggregationRepository](
-https://camel.apache.org/maven/camel-2.15.0/camel-core/apidocs/org/apache/camel/spi/RecoverableAggregationRepository.html).
-There are already implementations out there for leveldb and hazelcast, this blog helps you set it up with jboss data grid,
-another popular key/value pair type cache/object store.
+Raspbian provides a great bed for learning the inner workings of linux, yscrew it up and convince yourself that its just
+a stepping stone. I realize you can do it with a VM but (i'll fill in a good reason later ). My first foray was the
+compilation of a simple device driver, you know that's what the internet search said was baby steps, turns out its not
+that bad.
 
 
 
