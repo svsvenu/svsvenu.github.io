@@ -69,10 +69,7 @@ Yea, does what it says
 
 ## The code
 
-You can find the code here
+You can find the code here [Da project](https://github.com/svsvenu/poc/tree/master/camel-standalone-rest)
 
-[Da project](https://github.com/svsvenu/poc/tree/master/camel-standalone-rest)
-
-{% include disqus.html %}
 
 
