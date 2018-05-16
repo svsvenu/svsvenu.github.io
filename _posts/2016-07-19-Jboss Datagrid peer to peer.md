@@ -39,6 +39,8 @@ care to inspect the details, you can see some of the keys leaving one node and a
 
 We can extend this concept and add 'n' nodes which means more heaps that chip in to carry the load.
 
+{% include disqus.html %}
+
 
 
 
