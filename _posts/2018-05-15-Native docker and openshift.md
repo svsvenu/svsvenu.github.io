@@ -2,7 +2,7 @@
 layout: post
 title: Deploy a micro-service on native docker and openshift
 ---
-{% include _includes/disqus.html %}
+{% include disqus.html %}
 
 
 ## Assumptions
