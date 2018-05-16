@@ -2,7 +2,6 @@
 layout: post
 title: Deploy a micro-service on native docker and openshift
 ---
-{% include disqus.html %}
 
 
 ## Assumptions
@@ -67,4 +66,7 @@ background
 oc logout
 ```
 Yea, does what it says
+
+{% include disqus.html %}
+
 
