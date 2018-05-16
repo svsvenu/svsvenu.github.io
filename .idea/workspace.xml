@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="627c9aa8-d4b3-4adc-aa2d-77549817692e" name="Default" comment="webservice with maven">
-      <change beforePath="$PROJECT_DIR$/_layouts/disqus.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/disqus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md" afterDir="false" />
     </list>
     <ignored path="Venu_blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,16 +44,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-07-19-Wuthering heights or Naked lunch.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-07-19-Wuthering heights or Naked lunch.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2016-11-13-Statistical good guy.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2016-11-13-Statistical good guy.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -73,19 +64,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-05-15-Native docker and openshift.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2018-05-15-Native docker and openshift.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="60">
-                <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <first_editor relative-caret-position="75">
+                <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="disqus.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="disqus.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/disqus.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
@@ -105,6 +96,15 @@
             <state split_layout="SPLIT">
               <first_editor />
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -130,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2016-06-01-Webservice-maven.md" />
         <option value="$PROJECT_DIR$/_posts/2015-8-10-ActiveMQ-Connectors.md" />
         <option value="$PROJECT_DIR$/_posts/2015-8-10-Webmethods on Docker.md" />
@@ -144,8 +143,9 @@
         <option value="$PROJECT_DIR$/_posts/Camel split and aggregate with JDG repository.md" />
         <option value="$PROJECT_DIR$/_posts/2016-12-13-Camel split and aggregate with JDG repository.md" />
         <option value="$PROJECT_DIR$/_posts/2017-09-06-Linux device driver on raspberry pi 3.md" />
-        <option value="$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md" />
         <option value="$PROJECT_DIR$/_layouts/disqus.html" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md" />
       </list>
     </option>
   </component>
@@ -181,11 +181,6 @@
             <path>
               <item name="Venu_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Venu_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Venu_blog" type="b2602c69:ProjectViewProjectNode" />
@@ -370,7 +365,7 @@
       <workItem from="1486842296519" duration="1190000" />
       <workItem from="1487613079408" duration="582000" />
       <workItem from="1504750388145" duration="1455000" />
-      <workItem from="1526397046836" duration="4723000" />
+      <workItem from="1526397046836" duration="5104000" />
     </task>
     <task id="LOCAL-00001" summary="webservice with maven">
       <created>1464839764537</created>
@@ -467,7 +462,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86834000" />
+    <option name="totallyTimeSpent" value="87215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="0" />
@@ -774,13 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2015-9-02-JavaKey-tool-cheatsheet.md">
       <provider editor-type-id="text-editor">
         <state>
@@ -904,20 +892,27 @@
     <entry file="file://$PROJECT_DIR$/_layouts/post.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/disqus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
