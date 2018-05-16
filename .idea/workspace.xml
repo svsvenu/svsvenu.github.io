@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="627c9aa8-d4b3-4adc-aa2d-77549817692e" name="Default" comment="webservice with maven">
-      <change afterPath="$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_layouts/disqus.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md" afterDir="false" />
     </list>
     <ignored path="Venu_blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,28 +25,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2015-8-10-ActiveMQ-Connectors.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2015-8-10-ActiveMQ-Connectors.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2015-8-10-Webmethods on Docker.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2015-8-10-Webmethods on Docker.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2015-9-02-JavaKey-tool-cheatsheet.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2015-9-02-JavaKey-tool-cheatsheet.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor />
@@ -99,12 +79,26 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="493">
-                <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+              <first_editor relative-caret-position="60">
+                <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="disqus.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_layouts/disqus.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="131" selection-start-line="12" selection-start-column="131" selection-end-line="12" selection-end-column="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="2016-12-13-Camel split and aggregate with JDG repository.md" pinned="false" current-in-tab="false">
@@ -152,6 +146,7 @@
         <option value="$PROJECT_DIR$/_posts/Camel split and aggregate with JDG repository.md" />
         <option value="$PROJECT_DIR$/_posts/2016-12-13-Camel split and aggregate with JDG repository.md" />
         <option value="$PROJECT_DIR$/_posts/2017-09-06-Linux device driver on raspberry pi 3.md" />
+        <option value="$PROJECT_DIR$/_layouts/disqus.html" />
         <option value="$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md" />
       </list>
     </option>
@@ -188,6 +183,11 @@
             <path>
               <item name="Venu_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Venu_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Venu_blog" type="b2602c69:ProjectViewProjectNode" />
@@ -372,7 +372,7 @@
       <workItem from="1486842296519" duration="1190000" />
       <workItem from="1487613079408" duration="582000" />
       <workItem from="1504750388145" duration="1455000" />
-      <workItem from="1526397046836" duration="4010000" />
+      <workItem from="1526397046836" duration="4597000" />
     </task>
     <task id="LOCAL-00001" summary="webservice with maven">
       <created>1464839764537</created>
@@ -469,7 +469,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86121000" />
+    <option name="totallyTimeSpent" value="86708000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="0" />
@@ -485,7 +485,7 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.38012618" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.38012618" />
       <window_info id="Capture Tool" />
       <window_info anchor="right" id="Designer" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17124394" />
@@ -537,20 +537,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/2015-8-10-Webmethods on Docker.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="181" column="4" selection-start-line="181" selection-start-column="4" selection-end-line="181" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-9-02-JavaKey-tool-cheatsheet.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-07-19-Jboss Datagrid peer to peer.md">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -917,11 +903,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/disqus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="131" selection-start-line="12" selection-start-column="131" selection-end-line="12" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-05-15-Native docker and openshift.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="493">
-            <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <first_editor relative-caret-position="60">
+            <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           </first_editor>
           <second_editor />
         </state>
