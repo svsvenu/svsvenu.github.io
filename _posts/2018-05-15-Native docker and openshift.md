@@ -6,7 +6,7 @@ title: Deploy a micro-service on native docker and openshift
 
 ## Assumptions
 
-This blog assumes that you have played around with docker and openshift and have deployed and image
+This blog assumes that you have played around with docker and openshift and have deployed an image
 or two along the way on both the platforms. A few things to ensure before you start running this
 applicaton are
 
@@ -18,13 +18,13 @@ applicaton are
 ## Introduction
 
 The application is a simple rest end point hosted by camel that uses netty as its http layer. It returns
-the string "Hello world" when invoked. Notice that its not a applicaton that is "deployed" on a server
+the string "Hello world" when invoked.it's not a applicaton that is "deployed" on a server
 in fact it comes bundled with an http layer, a la spring boot. The maven file for this project has three plugins
 that 
 
 - Create a runnable jar
-- Creates a docker image and pushes it on to docker hub
-- Pulls down the docker image from docker hub and pushes it to open shift and creates a route
+- Create a docker image and push it up to docker hub
+- Pull down the docker image from docker hub and run it on open shift, also create a route
 
 ## The bundler
 
@@ -66,6 +66,12 @@ background
 oc logout
 ```
 Yea, does what it says
+
+## The code
+
+You can find the code here
+
+[Da project](https://github.com/svsvenu/poc/tree/master/camel-standalone-rest)
 
 {% include disqus.html %}
 
