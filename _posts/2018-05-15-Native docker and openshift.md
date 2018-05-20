@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy a micro-service on native docker and openshift
+title: Deploy a microservice on native docker and openshift
 ---
 
 
