@@ -32,6 +32,23 @@ The very first step in the process is to build a jar file that is "runnable", Th
 than a camel route, and a blocking camel main to keep it running. We are using the maven-assembly-plugin to
 create a jar with all the dependencies bundled up
 
+## Logging
+
+The application uses the ubiquitous log4j logging framework and all the logging
+is routed to a file /tmp/log.out that is configured in the log4j.properties file in 
+src/main/resources folder of the project. 
+
+## file beat
+
+I have included the filebeat utility ( committed the sin of checking in the binary ) that watches the logfile (/tmp/log.out) created by the application
+and establishes a pipeline to send the logs to the ELK stack. We are also leveraging the openshift feature
+of config map which is a bunch of properties that are injected into a container and used in the application as
+properties. In our case the elk url is in the config map. and can be changed on openshift ( console or UI)
+to take effect on the pods. We also have to adjust the yml configuration file of file beat so that the
+properties file is replaced with an environment variable substitution 
+[ELK environment variable](https://www.elastic.co/guide/en/beats/filebeat/1.2/using-environ-vars.html). 
+
+
 ## The docker plugin
 
 The fabric8 docker plugin ties the goal of docker image creation to the build phase of install and creates a tar
