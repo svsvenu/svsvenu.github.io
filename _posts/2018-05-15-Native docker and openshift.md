@@ -19,14 +19,14 @@ applicaton are
 
 The application is a simple rest end point hosted by camel that uses netty as its http layer. It returns
 the string "Hello world" when invoked.it's not a applicaton that is "deployed" on a server
-in fact it comes bundled with an http layer, a la spring boot. The maven file for this project has three plugins
-that 
+in fact it comes bundled with an http layer, a la spring boot. The maven pom file for this project has three plugins
+that do the following
 
 - Create a runnable jar
 - Create a docker image and push it up to docker hub
 - Pull down the docker image from docker hub and run it on open shift, also create a route
 
-## The bundler
+## The Bundler
 
 The very first step in the process is to build a jar file that is "runnable", The application itself is nothing more
 than a camel route, and a blocking camel main to keep it running. We are using the maven-assembly-plugin to
@@ -38,7 +38,7 @@ The application uses the ubiquitous log4j logging framework and all the logging
 is routed to a file /tmp/log.out that is configured in the log4j.properties file in 
 src/main/resources folder of the project. 
 
-## file beat
+## File beat
 
 I have included the filebeat utility ( committed the sin of checking in the binary ) that watches the logfile (/tmp/log.out) created by the application
 and establishes a pipeline to send the logs to the ELK stack. We are also leveraging the openshift feature
