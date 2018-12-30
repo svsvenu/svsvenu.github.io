@@ -9,10 +9,6 @@ title: The mysterious memory mapped file
 This blog assumes that you have had to write something to a file in java, ideally you have had to write a lot to 
 a file using some of the native API's.
 
-- Docker daemon is running ( In my case i am running docker for mac )
-- Openshift is running ( I am using minishift but you could potentially use the real version )
-- oc tool ( The client for accessing openshift ) is in the path and can be accessed from any terminal window
-
 
 ## Introduction
 
