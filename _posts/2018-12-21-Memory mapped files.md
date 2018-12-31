@@ -56,7 +56,7 @@ this scenario is one of the outliers where bypassing it might be beneficial.
 
 ## The code
 
-You can find the code here [Da project](https://github.com/svsvenu/poc/tree/master/camel-standalone-rest)
+You can find the code here [Da project](http://svsvenu.github.io/Memory-mapped-files/)
 
 
 
