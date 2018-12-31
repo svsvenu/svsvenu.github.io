@@ -39,8 +39,13 @@ where blissfully unaware programmers got the code out of stack over flow. Now, y
 the blog thinking how is he going to prove/disprove that a system call is made? Not made ? 
 There must be a way ? Yep, enter “ strace”, tells you the system calls made by the process, 
 at this point our tool box is full of tools and body reeking of caffeine.
-Starting the application in memory mapped mode and tracking the system calls using strace with the following 
-commands shows us that there aren’t any system calls being made while the data is still being written as 
+Starting the application in memory mapped mode and tracking the system calls using stracewith the following 
+commands 
+```
+strace -e trace=write -f java com.venu.MemoryMappedFiles /home/venu/Desktop/mem.txt 
+ 
+```
+shows us that there aren’t any system calls being made while the data is still being written as 
 shown below. Now starting the application in regular mode shows that it’s making shit tons of system calls.
 
 ## Conclusion
