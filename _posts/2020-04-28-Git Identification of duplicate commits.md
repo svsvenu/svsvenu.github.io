@@ -50,11 +50,18 @@ The following script will set up the above git branch structure
 ![_config.yml]({{ site.baseurl }}/images/rebase.png)
  
 
-## Conclusion
+## Commits and hashes in stage 1
 
-While the effects of this behavior might not be noticeable at smaller loads, the savings do increase exponentially 
-as the load spikes, volume wise. System calls are the middleware you need to have most of the time, 
-this scenario is one of the outliers where bypassing it might be beneficial.
+<div class="datatable-begin"></div>
+
+Food    | Description                           | Category | Sample type
+------- | ------------------------------------- | -------- | -----------
+Apples  | A small, somewhat round ...           | Fruit    | Fuji
+Bananas | A long and curved, often-yellow ...   | Fruit    | Snow
+Kiwis   | A small, hairy-skinned sweet ...      | Fruit    | Golden
+Oranges | A spherical, orange-colored sweet ... | Fruit    | Navel
+
+<div class="datatable-end"></div>
 
 ## The code
 
